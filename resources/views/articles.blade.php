@@ -10,7 +10,27 @@
 <body>
     <div class="container mt-5">
         <h1>Bienvenue sur la liste des articles</h1>
-        <p>Ici, on va bientôt lister les articles !</p>
+
+        @if($articles->count()>0)
+            <div class="row">
+                @foreach ($articles as $article)
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $article -> title }}</h5>
+                            <p class="card-text"> {{ $article -> content }}</p>
+                            <small class="text-muted"> Cree le {{ $article -> created_at-> format('d/m/y') }}</small>
+                        </div>
+                    </div>
+                </div>
+                    
+                @endforeach
+            </div>
+            @else
+                <div class="alert alert-info">
+                    Aucun article pour le moment
+                </div>
+        @endif
     </div>
 </body>
 </html>

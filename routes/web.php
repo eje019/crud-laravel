@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,6 +9,4 @@ Route::get('/', function () {
 
 
 // route pour la liste des articles
-Route::get("/articles", function(){
-    return view("article");
-});
+Route::get("/articles", [ArticleController::class, "index"]);
