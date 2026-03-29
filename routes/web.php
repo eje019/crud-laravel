@@ -8,5 +8,5 @@ Route::get('/', function () {
 });
 
 
-// route pour la liste des articles
-Route::get("/articles", [ArticleController::class, "index"]);
+// // route pour la liste des articles
+// Route::get("/articles", [ArticleController::class, "index"]);

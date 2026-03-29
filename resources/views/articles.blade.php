@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,7 @@
                     Aucun article pour le moment
                 </div>
         @endif
+        
     </div>
 </body>
-</html>
+</html> --}}
